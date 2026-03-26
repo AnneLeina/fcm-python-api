@@ -1,18 +1,28 @@
 {
-  "name": "fcm-toolkit",
+  "name": "fcm-python-api",
   "version": "1.0.0",
-  "description": "Firebase Cloud Messaging — minimal working examples using the Admin SDK (Node.js)",
-  "main": "src/send-notification.js",
+  "description": "Firebase Cloud Messaging API — topic management tooling for the FCM Python API project",
+  "main": "manage-topics.js",
   "scripts": {
-    "send":      "node src/send-notification.js",
-    "multicast": "node src/send-multicast.js",
-    "topics":    "node src/manage-topics.js"
+    "start": "node manage-topics.js",
+    "subscribe": "node manage-topics.js subscribe",
+    "unsubscribe": "node manage-topics.js unsubscribe",
+    "list": "node manage-topics.js list",
+    "send-topic": "node manage-topics.js send-topic"
   },
-  "keywords": ["firebase", "fcm", "push-notifications", "admin-sdk", "node"],
-  "author": "FCM Toolkit Project",
+  "keywords": [
+    "firebase",
+    "fcm",
+    "push-notifications",
+    "topics",
+    "cloud-messaging"
+  ],
+  "author": "",
   "license": "MIT",
   "dependencies": {
-    "dotenv":         "^16.4.5",
-    "firebase-admin": "^12.1.0"
+    "firebase-admin": "^12.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
